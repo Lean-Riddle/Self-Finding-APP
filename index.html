@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AI 助手</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 700px;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <h1>AI 助手</h1>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-            <!-- 消息将在这里动态添加 -->
-        </div>
-        <div class="input-area">
-            <input type="text" class="message-input" id="messageInput" placeholder="输入消息...">
-            <button class="send-button" id="sendButton">发送</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
+    <iframe
+        src="http://14.103.172.196/chatbot/cSyhW4mFxh7vFLPH"
+        frameborder="0"
+        allow="microphone">
+    </iframe>
 </body>
 </html>
