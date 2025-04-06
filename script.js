@@ -73,6 +73,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // 在 fetch 请求中添加 mode: 'cors'
+    const response = await fetch('http://14.103.172.196/v1/chat/completions', {
+        method: 'POST',
+        mode: 'cors',  // 添加这行
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer app-8Xe8ITlY9YxNTrUk7wlLVb6r'
+        },
+        // ... 其他配置
+    });
+
+    // 在 script.js 中添加
+    window.addEventListener('message', function(e) {
+        console.log('收到小程序消息:', e.data);
+    });
+    
+    // 发送消息到小程序
+    function sendMessageToMiniProgram(data) {
+        if (window.wx && window.wx.miniProgram) {
+            window.wx.miniProgram.postMessage({ data });
+        }
+    }
+
     // 事件监听
     sendButton.addEventListener('click', sendMessage);
     messageInput.addEventListener('keypress', function(e) {
