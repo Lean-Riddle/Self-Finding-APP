@@ -60,7 +60,8 @@
  src="http://14.103.172.196/embed.min.js"
  id="cSyhW4mFxh7vFLPH"
  defer>
-</script>
+</script
+    
 <style>
   #dify-chatbot-bubble-button {
     background-color: #1C64F2 !important;
@@ -70,48 +71,5 @@
     height: 40rem !important;
   }
 </style>
-<body>
-    <div class="chat-container">
-        <div class="loading">正在加载聊天界面...</div>
-        <div class="error-message" id="errorMessage"></div>
-        <iframe 
-            id="chatFrame"
-            src="http://14.103.172.196/chatbot/cSyhW4mFxh7vFLPH" 
-            frameborder="0" 
-            allow="microphone"
-            onload="hideLoading()"
-            onerror="showError()">
-        </iframe>
-    </div>
 
-    <script>
-        function hideLoading() {
-            document.querySelector('.loading').style.display = 'none';
-        }
-
-        function showError() {
-            document.querySelector('.loading').style.display = 'none';
-            const errorMessage = document.getElementById('errorMessage');
-            errorMessage.style.display = 'block';
-            errorMessage.innerHTML = `
-                <h3>加载失败</h3>
-                <p>无法加载聊天界面，请检查：</p>
-                <ul style="text-align: left;">
-                    <li>网络连接是否正常</li>
-                    <li>是否允许跨域访问</li>
-                    <li>服务器是否正常运行</li>
-                </ul>
-                <button onclick="window.location.reload()">重新加载</button>
-            `;
-        }
-
-        // 检查 iframe 加载状态
-        window.onload = function() {
-            const iframe = document.getElementById('chatFrame');
-            if (!iframe.contentWindow || !iframe.contentWindow.document) {
-                showError();
-            }
-        };
-    </script>
-</body>
 </html>
