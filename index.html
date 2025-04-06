@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AI 助手</title>
     <style>
-        body, html {
+        body {
             margin: 0;
             padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             height: 100%;
-            width: 100%;
-            overflow: hidden;
         }
         iframe {
+            flex: 1;
             width: 100%;
             height: 100%;
             min-height: 700px;
@@ -21,10 +28,12 @@
     </style>
 </head>
 <body>
-    <iframe
-        src="http://14.103.172.196/chatbot/cSyhW4mFxh7vFLPH"
-        frameborder="0"
-        allow="microphone">
-    </iframe>
+    <div class="chat-container">
+        <iframe
+            src="http://14.103.172.196/chatbot/cSyhW4mFxh7vFLPH"
+            frameborder="0"
+            allow="microphone">
+        </iframe>
+    </div>
 </body>
 </html>
