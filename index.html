@@ -49,13 +49,34 @@
         }
     </style>
 </head>
+
+<script>
+ window.difyChatbotConfig = {
+  token: 'cSyhW4mFxh7vFLPH',
+  baseUrl: 'http://14.103.172.196'
+ }
+</script>
+<script
+ src="http://14.103.172.196/embed.min.js"
+ id="cSyhW4mFxh7vFLPH"
+ defer>
+</script>
+<style>
+  #dify-chatbot-bubble-button {
+    background-color: #1C64F2 !important;
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+  }
+</style>
 <body>
     <div class="chat-container">
         <div class="loading">正在加载聊天界面...</div>
         <div class="error-message" id="errorMessage"></div>
         <iframe 
             id="chatFrame"
-            src="https://14.103.172.196/chatbot/cSyhW4mFxh7vFLPH" 
+            src="http://14.103.172.196/chatbot/cSyhW4mFxh7vFLPH" 
             frameborder="0" 
             allow="microphone"
             onload="hideLoading()"
@@ -79,7 +100,6 @@
                     <li>网络连接是否正常</li>
                     <li>是否允许跨域访问</li>
                     <li>服务器是否正常运行</li>
-                    <li>是否支持 HTTPS 访问</li>
                 </ul>
                 <button onclick="window.location.reload()">重新加载</button>
             `;
